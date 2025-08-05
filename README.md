@@ -72,6 +72,7 @@ SectorController	API REST (CRUD)
 application.properties	Contient les infos Eureka + MySQL
 
 # les endpoints Swagger :
+
 Accès via : http://localhost:8081/swagger-ui.html
 
 GET /api/sectors
@@ -106,6 +107,7 @@ ClasseController	API REST (CRUD)
 application.properties	Config Eureka + MySQL
 
 # Les endpoints Swagger :
+
 Accès via : http://localhost:8082/swagger-ui.html
 
 GET /api/classes
@@ -122,22 +124,24 @@ DELETE /api/classes/{id}
 
 cd eureka-server
 mvn spring-boot:run
-# Accessible via : http://localhost:8761
+ Accessible via :http://localhost:8761
 2. Lancer Sector Service
 
 cd ../sector-service
 mvn spring-boot:run
-# Accessible : http://localhost:8081/swagger-ui.html
+ Accessible : http://localhost:8081/swagger-ui.html
 3. Lancer Classes Service
 
 cd ../classes-service
 mvn spring-boot:run
-# Accessible : http://localhost:8082/swagger-ui.html
+ Accessible : http://localhost:8082/swagger-ui.html
 
 
 # Le script de la base de données
+Chaque microservice a sa propre base de donnée
 
-CREATE DATABASE micro_db;
+CREATE DATABASE sector_db;
+CREATE DATABASE Classe_db;
 
 -- Table Sector
 CREATE TABLE sector (
