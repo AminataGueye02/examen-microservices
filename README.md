@@ -59,16 +59,19 @@ public class Sector {
     private Long id;
     private String name;
 }
+```
 
- Classes Java principales
+# Classes Java principales
+
 Classe	Description
+
 Sector	Entité JPA représentant un secteur
 SectorRepository	Interface JPA pour accéder aux données
 SectorService	Classe métier (injection de SectorRepository)
 SectorController	API REST (CRUD) 
 application.properties	Contient les infos Eureka + MySQL
 
- les endpoints Swagger :
+# les endpoints Swagger :
 Accès via : http://localhost:8081/swagger-ui.html
 
 GET /api/sectors
@@ -84,6 +87,7 @@ DELETE /api/sectors/{id}
 
 @Entity
 public class Classe {
+
     @Id @GeneratedValue
     private Long id;
     private String name;
@@ -91,7 +95,9 @@ public class Classe {
     @ManyToOne
     private Sector sector; 
 }
- Classes Java principales
+
+# Classes Java principales
+
 Classe	Description
 Classe	Entité JPA
 ClasseRepository	Interface JPA
@@ -99,7 +105,7 @@ ClasseService	Service métier
 ClasseController	API REST (CRUD)
 application.properties	Config Eureka + MySQL
 
-Les endpoints Swagger :
+# Les endpoints Swagger :
 Accès via : http://localhost:8082/swagger-ui.html
 
 GET /api/classes
@@ -188,6 +194,7 @@ http://localhost:8081/swagger-ui.html → Sectors
     <artifactId>mysql-connector-java</artifactId>
   </dependency>
 </dependencies>
+
 🧑‍💻 Auteur
 Ce projet a été développé par Aminata Gueye
 Master 1 - Génie Logiciel Groupe 1 – ISI
